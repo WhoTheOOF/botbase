@@ -6,7 +6,7 @@ import util.config as config # I use config, so this is a general import
 # In this example, we will be assuming that you use cogs and a linux machine, windows will have its own thing I will add within the next week or so..
 # The 'message_content' intent is required using this example, I won't cover slash anytime soon so have fun with that...ok maybe once...
 
-intents = discord.Intents.all()
+intents = discord.Intents.all() # We don't need to define the 'message_content' intent since we used the 'all' factor of intents.
 
 class BotBase(commands.AutoShardedBot):
     def __init__(self, *args, **kwargs):
