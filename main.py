@@ -33,15 +33,15 @@ class BotBase(commands.AutoShardedBot):
                     traceback.print_exc()
 
     async def on_ready(self):
-        print(f"Logged into discord as {bot.user} (with {bot.user.id} as my user ID!")
-        print(f"Seems all is good since these messages sent.")
+        print(f"Logged into discord as {bot.user} (with {bot.user.id} as my user ID!") # If this message is received, it means your bot is ready for use. aka connected to discord without issues
 
 
 bot = BotBase(
     command_prefix="bb!",
     intents=intents,
     chunk_guilds_at_startup=False, # can be set to true but that depends on your preference/usecase
+    max_messages=1000, # this limits how many messages your bot will cache in its system. the number depends on your perference/usecase. don't set it too high unless you want a crash
     allowed_mentions=discord.AllowedMentions(everyone=False, roles=False, replied_user=True, users=True) # you can change all these to your likings, this is just for example sake
 )
 
-bot.run(config.YOUR_BOT_TOKEN) # We use config, which you can see, this isn't the best way to run a bot but I will cover advanced startup soon.
+bot.run(config.YOUR_BOT_TOKEN) # We use config, which you can see, this isn't the best way to run a bot but I will cover advanced startup soon. i mean i use it but could be worse
