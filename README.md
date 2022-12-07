@@ -4,4 +4,6 @@
 
 A simple bot base for your discord.py projects!
 
-If you want to see more complex versions, switch the branch!
+For more complex versions, click [here](https://github.com/WhoTheOOF/botbase/tree/complex)
+
+Advanced startup will have a completely new branch when I do it.
