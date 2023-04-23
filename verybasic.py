@@ -2,7 +2,8 @@ import discord
 from discord.ext import commands
 
 intents = discord.Intents.default()
-intents.message_content = True
+intents.members = True # enable this under dev portal
+intents.message_content = True # be sure to enable it via the dev portal, and if you want to use presences too, just add intents.presences = True
 
 bot = commands.Bot(intents=intents, command_prefix="prefix-goes-here")
 
